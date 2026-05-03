@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Libor Vokurka - Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+body{background:#0f111a;color:#e5e7eb;line-height:1.6;}
+a{text-decoration:none;color:inherit;}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:#111827;position:sticky;top:0;z-index:1000;}
+header .logo{font-weight:700;font-size:1.3rem;color:#82aaff;}
+nav a{margin-left:25px;font-weight:500;transition:0.2s;}
+nav a:hover{color:#82aaff;}
+section{padding:60px 20px;max-width:1200px;margin:0 auto;}
+h2{font-size:2rem;margin-bottom:20px;color:#fff;text-align:center;}
+
+/* Hero */
+.hero{height:55vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(135deg,#111827,#1f2937);}
+.hero h1{font-size:3rem;color:#82aaff;margin-bottom:15px;}
+.hero p{font-size:1.2rem;color:#cbd5e1;margin-bottom:20px;}
+.hero button{padding:12px 25px;background:#82aaff;color:#fff;border:none;border-radius:8px;cursor:pointer;font-weight:600;transition:0.3s;}
+.hero button:hover{background:#5b78d6;}
+
+/* O mně */
+#about{display:flex;flex-wrap:wrap;gap:30px;align-items:center;margin-top:40px;}
+#about img{border-radius:15px;width:300px;height:300px;object-fit:cover;flex-shrink:0;box-shadow:0 10px 25px rgba(0,0,0,0.5);}
+#about .about-text{flex:1;min-width:280px;}
+#about .about-text p{margin-bottom:10px;}
+.about-icons span{margin-right:15px;font-weight:600;color:#82aaff;font-size:1.05rem;}
+
+/* Dovednosti */
+#skills{margin-top:40px;}
+.skill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:20px;justify-items:center;margin-top:20px;}
+.skill-card{background:#111827;padding:20px;border-radius:12px;width:140px;text-align:center;transition:0.3s;cursor:pointer;box-shadow:0 5px 15px rgba(0,0,0,0.3);word-wrap: break-word;}
+.skill-card:hover{transform:translateY(-5px);box-shadow:0 12px 25px rgba(0,0,0,0.5);}
+.skill-card img{width:60px;height:60px;margin-bottom:10px;object-fit:contain;}
+
+/* Projekty */
+#projects{margin-top:50px;}
+.project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px;}
+.project-card{position:relative;background:#111827;border-radius:12px;overflow:hidden;cursor:pointer;border:1px solid #1f2937;transition:0.3s;}
+.project-card:hover{transform:translateY(-5px);box-shadow:0 12px 25px rgba(0,0,0,0.5);border-color:#82aaff;}
+.project-card img{width:100%;height:180px;object-fit:cover;transition:transform 0.3s;}
+.project-card:hover img{transform:scale(1.05);}
+.project-card .content{padding:15px;}
+.project-card .content h3{color:#82aaff;margin-bottom:8px;}
+.project-card .content p{color:#cbd5e1;font-size:0.95rem;line-height:1.5;}
+.status{position:absolute;top:12px;left:12px;padding:5px 12px;border-radius:12px;font-size:0.8rem;font-weight:600;text-transform:uppercase;}
+.status.active{background:#16a34a;color:#fff;}
+.status.postponed{background:#facc15;color:#111827;}
+
+/* Kontakt */
+#contact{padding:60px 20px;text-align:center;background:#111827;margin-top:50px;}
+.contact-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;margin-top:20px;}
+.contact-btn{display:inline-block;padding:15px 25px;background:#82aaff;color:#fff;border-radius:12px;font-weight:600;font-size:1rem;transition:0.3s;text-decoration:none;}
+.contact-btn:hover{background:#5b78d6;transform:translateY(-3px);}
+
+/* Mobile */
+@media(max-width:768px){
+  #about{flex-direction:column;text-align:center;}
+  .skill-grid{grid-template-columns:repeat(auto-fit,minmax(100px,1fr));}
+  nav a{margin-left:15px;}
+  .project-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">LIBOR V.</div>
+  <nav>
+    <a href="#about">O mně</a>
+    <a href="#skills">Dovednosti</a>
+    <a href="#projects">Projekty</a>
+    <a href="#contact">Kontakt</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Libor Vokurka</h1>
+  <p>Game Developer & Social Creator</p>
+  <button onclick="location.href='#about'">Začít</button>
+</section>
+
+<section id="about">
+  <img src="https://i.imgur.com/3Mviw7D.png" alt="Libor Vokurka">
+  <div class="about-text">
+    <p>Jmenuji se Libor Vokurka, věnuji se vývoji her v Unreal Engine a spravování obsahu na sociálních sítích.</p>
+    <p>Začal jsem s FiveM servery, kde jsem se učil programování a správu projektů. Můj cíl je tvořit vlastní hry, zlepšovat se a sdílet své projekty s komunitou.</p>
+    <div class="about-icons">
+      <span>🎮 Unreal Engine</span>
+      <span>💻 C++ / Blueprint</span>
+      <span>📱 Social Media</span>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Dovednosti</h2>
+  <div class="skill-grid">
+    <div class="skill-card"><img src="https://img.icons8.com/ios-filled/50/82aaff/game-controller.png"/><p>Unreal Engine</p></div>
+    <div class="skill-card"><img src="https://img.icons8.com/ios-filled/50/82aaff/laptop.png"/><p>Blueprint</p></div>
+    <div class="skill-card"><img src="https://img.icons8.com/ios-filled/50/82aaff/code.png"/><p>C++</p></div>
+    <div class="skill-card"><img src="https://img.icons8.com/ios-filled/50/82aaff/joystick.png"/><p>Game Design</p></div>
+    <div class="skill-card"><img src="https://img.icons8.com/ios-filled/50/82aaff/ruler.png"/><p>Level Design</p></div>
+    <div class="skill-card"><img src="https://img.icons8.com/ios-filled/50/82aaff/artificial-intelligence.png"/><p>AI systémy</p></div>
+    <div class="skill-card"><img src="https://img.icons8.com/ios-filled/50/82aaff/tablet.png"/><p>Social Media</p></div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projekty</h2>
+  <div class="project-grid">
+    <div class="project-card">
+      <div class="status active">Aktivní</div>
+      <img src="https://i.imgur.com/0Oui0l7.png" alt="Last Tide">
+      <div class="content">
+        <h3>Last Tide</h3>
+        <p>Největší projekt – hra na ostrově s otevřeným světem.</p>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="status postponed">Odložený</div>
+      <img src="https://i.imgur.com/3hK0TOv.png" alt="FiveM Server">
+      <div class="content">
+        <h3>FiveM Server</h3>
+        <p>Mé první zkušenosti s vývojem a komunitou. Projekt je momentálně odložen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Kontakt</h2>
+  <div class="contact-grid">
+    <a href="tel:+731574030" class="contact-btn">📞 731 574 030</a>
+    <a href="https://www.instagram.com/vokysekkk/" target="_blank" class="contact-btn">📸 Instagram</a>
+    <a href="https://www.youtube.com/@vokysekk" target="_blank" class="contact-btn">▶️ YouTube</a>
+  </div>
+</section>
+</body>
+</html>
